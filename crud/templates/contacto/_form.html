@@ -8,4 +8,9 @@
 		<input type="submit" class="btn btn-primary" value="{% block value %}{% endblock value %}">
 		<a href="{% url contacto.views.index %}" class="btn">Volver</a>
 	</form>
+	<script>		
+		$(function () {
+			$('#id_fn').datepicker({ format: 'dd/mm/yyyy' });
+		});
+	</script>
 {% endblock content %}
