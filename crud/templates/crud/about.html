@@ -1,10 +1,28 @@
 {% extends "base.html" %}
 
-{% block title %}Acerca de{% endblock %}
+{% block title %}Acerca de la aplicación{% endblock %}
 
 {% block content %}
-<h1>Acerca de</h1>
-<p>
-	Aplicación de ejemplo desarrollada con Django y Twitter bootstrap.
-</p>
+<h1>Acerca de la aplicación</h1>
+
+<div>
+	<h4>Librerias utilizadas:</h4>
+	<ul>
+		<li><a href="https://www.djangoproject.com/">Django 1.4.3</a></li>
+		<li><a href="http://www.sqlite.org/">Sqlite3</a></li>
+		<li><a href="http://jquery.com/">jQuery 1.8.3</a></li>
+		<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2.2.2</a></li>
+		<li><a href="http://www.eyecon.ro/bootstrap-datepicker/">Bootstrap DatePicker</a></li>
+	</ul>
+</div>
+
+<div>
+	<h4>Contacto:</h4>
+	<address>
+		<strong>Amador Cuenca</strong><br>
+		Email: <a href="mailto:sphi02ac@gmail.com">sphi02ac@gmail.com</a><br>
+		Twitter: <a href="https://twitter.com/amadorcuenca">@amadorcuenca</a><br>
+		Github: <a href="https://github.com/acuenca">acuenca</a>
+	</address>
+</div>
 {% endblock %}
