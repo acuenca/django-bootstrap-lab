@@ -15,12 +15,24 @@ def agregar(request):
 		frm = ContactoForm(request.POST)
 		if frm.is_valid():
 			frm.save()
-			return HttpResponseRedirect("/")
+			return HttpResponseRedirect("/contacto")
 	else:
 		frm = ContactoForm()
 	return render_to_response("contacto/agregar.html", { "frm": frm }, context_instance=RequestContext(request))
 
-#def editar(request):
+def editar(request, id):
+	contacto = Contacto.objects.get(pk=id)
+	if request.method == 'POST':
+		frm = ContactoForm(request.POST, instance=contacto)
+		if frm.is_valid():
+			frm.save()
+			return HttpResponseRedirect("/contacto")
+	else:
+		frm = ContactoForm(instance=contacto)
+	return render_to_response("contacto/editar.html", { "frm": frm }, context_instance=RequestContext(request))
 
 
-#def borrar(request):
+def borrar(request, id):
+	contacto = Contacto.objects.get(pk=id)
+	contacto.delete()
+	return HttpResponseRedirect("/contacto")

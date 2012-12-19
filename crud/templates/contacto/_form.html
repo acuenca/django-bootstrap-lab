@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="post">
+		{% csrf_token %}
+		{{ frm.as_p }}
+		
+		<input type="submit" class="btn btn-primary" value="{% block value %}{% endblock value %}">
+		<a href="{% url contacto.views.index %}" class="btn">Volver</a>
+	</form>
+{% endblock content %}

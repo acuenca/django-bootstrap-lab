@@ -1,12 +1,5 @@
-{% extends "base.html" %}
+{% extends "contacto/_form.html" %}
 
-{% block title %}Agregar nuevo contacto {% endblock title %}
+{% block title %}Agregar nuevo{% endblock title %}
 
-{% block content %}
-	<form method="post">
-		{% csrf_token %}
-		{{ frm.as_p }}
-		
-		<input type="submit" class="btn btn-primary" value="Agregar">
-	</form>
-{% endblock content %}
+{% block value %}Agregar{% endblock value %}

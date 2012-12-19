@@ -3,7 +3,7 @@
 {% block title %}Contactos{% endblock title %}
 
 {% block content %}
-	<h1>Index de contactos</h1>
+	<h1>Lista de contactos</h1>
 	
 	{% if contactos|length == 0 %}
 		<div class="alert alert-info alert-block">
@@ -29,7 +29,10 @@
 				<td>{{ c.fn }}</td>
 				<td>{{ c.email }}</td>
 				<td>{{ c.twitter }}</td>
-				<td></td>
+				<td>
+					<a href="{% url contacto.views.editar c.id %}"><i class="icon-pencil"></i></a>
+					<a href="{% url contacto.views.borrar c.id %}"><i class="icon-remove"></i></a>
+				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
