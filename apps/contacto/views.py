@@ -2,8 +2,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from contacto.models import Contacto
-from contacto.forms import ContactoForm
+from apps.contacto.models import Contacto
+from apps.contacto.forms import ContactoForm
 
 
 def index(request):

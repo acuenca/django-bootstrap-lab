@@ -30,13 +30,13 @@
 				<td>{{ c.email }}</td>
 				<td>{{ c.twitter }}</td>
 				<td>
-					<a href="{% url contacto.views.editar c.id %}"><i class="icon-pencil"></i></a>
-					<a href="{% url contacto.views.borrar c.id %}"><i class="icon-remove"></i></a>
+					<a href="{% url apps.contacto.views.editar c.id %}"><i class="icon-pencil"></i></a>
+					<a href="{% url apps.contacto.views.borrar c.id %}"><i class="icon-remove"></i></a>
 				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
 	</table>
 	{% endif %}
-	<a href="{% url contacto.views.agregar %}" class="btn btn-primary">Agregar nuevo</a>
+	<a href="{% url apps.contacto.views.agregar %}" class="btn btn-primary">Agregar nuevo</a>
 {% endblock content %}
