@@ -15,7 +15,7 @@ def agregar(request):
 		frm = ContactoForm(request.POST)
 		if frm.is_valid():
 			frm.save()
-			return HttpResponseRedirect("contacto/")
+			return HttpResponseRedirect("/")
 	else:
 		frm = ContactoForm()
 	return render_to_response("contacto/agregar.html", { "frm": frm }, context_instance=RequestContext(request))
