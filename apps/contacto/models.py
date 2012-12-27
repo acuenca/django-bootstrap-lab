@@ -7,3 +7,6 @@ class Contacto(models.Model):
 	fn = models.DateField('Fecha de nacimiento')
 	email = models.EmailField()
 	twitter = models.CharField(max_length=100)
+	
+	def nombre_completo(self):
+		return ', '.join([self.apellidos, self.nombres])

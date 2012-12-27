@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock title %}
+
+{% block content %}
+<table class="table table-condensed">
+	<tr>
+		<th>Nombre completo</th>
+		<td>{{ contacto.nombre_completo }}</td>
+	</tr>
+	<tr>
+		<th>Fecha de nacimiento</th>
+		<td>{{ contacto.fn }}</td>
+	</tr>
+	<tr>
+		<th>e-mail</th>
+		<td>{{ contacto.email }}</td>
+	</tr>
+	<tr>
+		<th>Twitter</th>
+		<td>{{ contacto.twitter }}</td>
+	</tr>
+</table>
+{% endblock content %}

@@ -13,8 +13,7 @@
 	<table class="table table-striped table-condensed">
 		<thead>
 			<tr>
-				<th>Nombres</th>
-				<th>Apellidos</th>
+				<th>Nombre completo</th>
 				<th>Fecha de Nacimiento</th>
 				<th>Email</th>
 				<th>Twitter</th>
@@ -24,12 +23,12 @@
 		<tbody>
 			{% for c in contactos %}
 			<tr>
-				<td>{{ c.nombres }}</td>
-				<td>{{ c.apellidos }}</td>
+				<td>{{ c.nombre_completo }}</td>
 				<td>{{ c.fn }}</td>
 				<td>{{ c.email }}</td>
 				<td>{{ c.twitter }}</td>
 				<td>
+					<a href="{% url apps.contacto.views.detalle c.id %}"><i class="icon-list-alt"></i></a>
 					<a href="{% url apps.contacto.views.editar c.id %}"><i class="icon-pencil"></i></a>
 					<a href="{% url apps.contacto.views.borrar c.id %}"><i class="icon-remove"></i></a>
 				</td>
@@ -39,4 +38,5 @@
 	</table>
 	{% endif %}
 	<a href="{% url apps.contacto.views.agregar %}" class="btn btn-primary">Agregar nuevo</a>
+	<a href="{% url apps.contacto.views.pdf %}" class="btn">Ver en PDF</a>
 {% endblock content %}
