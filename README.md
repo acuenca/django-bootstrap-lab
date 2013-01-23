@@ -1,4 +1,4 @@
-# Django + Backbone
+# Django + Bootstrap
 
 Aplicación de ejemplo desarrollada con Django y Twitter bootstrap.
 
